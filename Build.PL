@@ -1,6 +1,8 @@
 use strict;
 use warnings;
 use Alien::Base::ModuleBuild;
+$Alien::Base::ModuleBuild::Verbose = 1;
+$Alien::Base::ModuleBuild::Force = 1;
 
 my $build = Alien::Base::ModuleBuild->new(
     module_name => 'Alien::Keystone',
@@ -27,6 +29,7 @@ my $build = Alien::Base::ModuleBuild->new(
         location => '/keystone-engine/keystone/archive/',
         exact_filename => 'master.tar.gz',
         exact_version => '1.0',
+        c_compiler_required => 1,
     },
     alien_msys => 1,
     alien_bin_requires => {
@@ -42,7 +45,6 @@ my $build = Alien::Base::ModuleBuild->new(
     alien_install_commands => [
         'make install PREFIX=%s',
     ],
-    alien_version_check => '%{pkg_config} --atleast-version 0.9.1 %n && %{pkg_config} --modversion %n',
     meta_merge => {
         resources => {
             repository => 'https://github.com/selectiveintellect/p5-alien-keystone',
