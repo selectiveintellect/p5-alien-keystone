@@ -9,13 +9,13 @@ my $build = Alien::Base::ModuleBuild->new(
     license => 'mit',
     dist_author => 'Vikas N. Kumar <vikas@cpan.org>',
     dist_abstract => 'Alien module for Keystone Engine from www.keystone-engine.org',
+    create_readme => 1,
     configure_requires => {
         'Module::Build' => 0,
         'Alien::Base::ModuleBuild' => '0.029',
     },
     build_requires => {
         'Alien::Base::ModuleBuild' => '0.029',
-        'Test::Alien' => 0,
         'Module::Build' => 0,
         'Test::More' => 0,
     },

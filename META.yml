@@ -6,7 +6,6 @@ build_requires:
   Alien::Base::ModuleBuild: '0.029'
   Alien::CMake: '0.07'
   Module::Build: '0'
-  Test::Alien: '0'
   Test::More: '0'
 configure_requires:
   Alien::Base::ModuleBuild: '0.029'
@@ -21,7 +20,7 @@ name: Alien-Keystone
 provides:
   Alien::Keystone:
     file: lib/Alien/Keystone.pm
-    version: '0.02'
+    version: '0.03'
 requires:
   Alien::Base: '0.029'
   File::ShareDir: '1.00'
@@ -29,4 +28,4 @@ resources:
   bugtracker: https://github.com/selectiveintellect/p5-alien-keystone/issues
   license: http://www.opensource.org/licenses/mit-license.php
   repository: https://github.com/selectiveintellect/p5-alien-keystone
-version: '0.02'
+version: '0.03'

@@ -1,7 +1,7 @@
 package Alien::Keystone;
 use parent 'Alien::Base';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 1;
 
@@ -25,6 +25,9 @@ installation if any. It is currently setup to look for the Github master.
 You can use it in the C<Build.PL> file if you're using Module::Build or
 C<Makefile.PL> file if you're using ExtUtils::MakeMaker.
 
+
+            use Alien::Keystone;
+            # ...
             my $keystone= Alien::Keystone->new;
             my $build = Module::Build->new(
                 ...
@@ -36,7 +39,7 @@ C<Makefile.PL> file if you're using ExtUtils::MakeMaker.
 
 =head1 VERSION
 
-0.02
+0.03
 
 =head1 METHODS
 

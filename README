@@ -14,6 +14,8 @@ SYNOPSIS
     You can use it in the Build.PL file if you're using Module::Build or
     Makefile.PL file if you're using ExtUtils::MakeMaker.
 
+                use Alien::Keystone;
+                # ...
                 my $keystone= Alien::Keystone->new;
                 my $build = Module::Build->new(
                     ...
@@ -24,7 +26,7 @@ SYNOPSIS
 
 VERSION
 
-    0.02
+    0.03
 
 METHODS
 
